@@ -13,6 +13,7 @@ from codeflash.telemetry import posthog_cf
 from codeflash.telemetry.sentry import init_sentry
 
 
+
 def main() -> None:
     """Entry point for the codeflash command-line interface."""
     paneled_text(

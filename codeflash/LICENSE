@@ -3,7 +3,11 @@ Business Source License 1.1
 Parameters
 
 Licensor:             CodeFlash Inc.
+<<<<<<< Updated upstream
 Licensed Work:        Codeflash Client version 0.12.x
+=======
+Licensed Work:        Codeflash Client version 0.11.x
+>>>>>>> Stashed changes
                       The Licensed Work is (c) 2024 CodeFlash Inc.
 
 Additional Use Grant: None. Production use of the Licensed Work is only permitted
@@ -13,7 +17,11 @@ Additional Use Grant: None. Production use of the Licensed Work is only permitte
                       Platform. Please visit codeflash.ai for further
                       information.
 
+<<<<<<< Updated upstream
 Change Date:          2029-04-23
+=======
+Change Date:          2029-04-25
+>>>>>>> Stashed changes
 
 Change License:       MIT
 

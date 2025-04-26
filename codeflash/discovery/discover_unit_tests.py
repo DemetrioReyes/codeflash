@@ -18,8 +18,11 @@ from codeflash.code_utils.code_utils import get_run_tmp_file, module_name_from_f
 from codeflash.code_utils.compat import SAFE_SYS_EXECUTABLE
 from codeflash.models.models import CodePosition, FunctionCalledInTest, TestsInFile, TestType
 
+from .utilsdb import get_db_connection, add_test_file
+
 if TYPE_CHECKING:
     from codeflash.verification.verification_utils import TestConfig
+
 
 
 @dataclass(frozen=True)
@@ -202,7 +205,14 @@ def process_test_files(
     function_to_test_map = defaultdict(set)
     jedi_project = jedi.Project(path=project_root_path)
     goto_cache = {}
-
+    console.print(file_to_test_map)
+    
+    get_db_connection()
+    add_test_file(file_to_test_map)
+        
+    
+    
+    raise SystemExit
     with test_files_progress_bar(
         total=len(file_to_test_map), description="Processing test files"
     ) as (progress, task_id):
